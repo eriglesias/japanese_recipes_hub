@@ -1,5 +1,4 @@
 import './styles/App.css'
-import RecipeTitle from './components/RecipeTitle'
 import RecipeCard from './components/RecipeCard';
 
 function App() {
@@ -22,7 +21,7 @@ const mockRecipes = [
  {
   id: 1,
   name: "Tonkatsu/ Breaded Pork Cutlet (豚カツ)",
-  region: "Kansai",
+  region: "Kanto",
   category: "main-dish",
   prepTime: 15,
   cookTime: 5,
@@ -99,6 +98,42 @@ const mockRecipes = [
   ],
   tags: ["comfort food", "spicy", "family-friendly"],
   image: "src/assets/chicken-curry2.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+
+{
+  id: 3,
+  name: "Okonomiyaki/ Japanese Pancake (お好み焼き)",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "2 tablespoons", note: "" },
+    { name: "scallions", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "yam or potato", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "water", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "eggs", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "all-purpose flour", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "salt", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "katsuobushi", amount: "2 thighs", note: "cut into bite-sized pieces" },
+    { name: "sunflower oil", amount: "2 thighs", note: "cut into bite-sized pieces" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Heat 1 tablespoon of oil in a deep frying pan over medium heat. Add chicken pieces, skin-side down, and cook for 1 minute each side." },
+    { step: 2, description: "Remove chicken. Add remaining oil, onions, garlic, and ginger. Fry until golden and caramelized. Add celery, carrot, and apple, and cook for 10 minutes." },
+    { step: 3, description: "Remove from heat, stir in curry powder, and mix well. Return to heat, add tomatoes and simmer for 2 minutes. Stir in flour, cook for 1-2 minutes, then gradually add dashi or stock." },
+    { step: 4, description: "Add chicken, potatoes, and seasoning (Worcestershire sauce, yeast, soy sauce, salt). Simmer for 20 minutes over medium-low heat." },
+    { step: 5, description: "Cut eggplant into large cubes, zucchini into 1-cm slices, pepper into strips, and trim beans. Fry in 3 cm of oil at 180°C until golden." },
+    { step: 6, description: "Divide rice onto four plates, add curry, and top with fried vegetables." }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "",
   culturalNotes: "Traditional preparation method...",
   additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
 }
