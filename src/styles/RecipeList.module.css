@@ -1,0 +1,14 @@
+.filter {
+    margin: 20px;
+    text-align: center;
+    color: #4a2c2a;
+}
+
+.recipe_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff8e1; 
+}

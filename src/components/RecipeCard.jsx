@@ -1,12 +1,13 @@
 import styles from '../styles/RecipeCard.module.css';
-import RecipeTitle from './RecipeTitle'
+import { Link } from 'react-router-dom';
+import RecipeTitle from './RecipeTitle';
 import RecipeImage from './RecipeImage';
 import RecipeTags from './RecipeTags';
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <div className={styles.recipe_card}>
-      <RecipeTitle title={recipe.name} />
+    <Link to={`/recipe/${recipe.id}`} className={styles.recipe_card}>
+      <RecipeTitle name={recipe.name} name_jap={recipe.name_jap} />
       <RecipeImage src={recipe.image} alt={recipe.name}/>
       <div>
         <p> Region: {recipe.region}</p>
@@ -14,7 +15,7 @@ const RecipeCard = ({ recipe }) => {
         <p> Difficulty: {recipe.difficulty}</p>
       </div>
       <RecipeTags tags={recipe.tags} />
-    </div>
+    </Link>
   );
 };
 
