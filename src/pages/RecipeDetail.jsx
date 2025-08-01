@@ -1,28 +1,50 @@
+import { useState, useEffect } from 'react';
+import { useParams, Link} from 'react-router-dom';
+import { motion } from 'framer-motion';
 import styles from '../styles/RecipeDetail.module.css';
-import { useParams } from 'react-router-dom';
 import RecipeTitle from '../components/RecipeTitle';
 import RecipeImage from '../components/RecipeImage';
 import RecipeTags from '../components/RecipeTags';
-import { Link } from 'react-router-dom';
+
+const MotionDiv = motion.div;
 
 
-
-
-const RecipeDetail = ( {mockRecipes}) => {
-  console.log('mockRecipes:', mockRecipes)
+const RecipeDetail = () => {
   const { id } = useParams();
-  console.log('id', id)
-  const recipe = mockRecipes.find(recipe => recipe.id === parseInt(id)); // This will cause an error without import
+  //state management useState to hold the recipe
+  const [recipe, setRecipe] = useState(null);
+  const [loading,setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  if (!recipe) {
-    console.log('Recipe not found for id:', id);
-    return <div>Recipe not found</div>;
-  }
+  useEffect(() => {
+    setLoading(true);
+    fetch(`http://localhost:3005/recipes/${id}`).then((response) => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then((data) => {
+      setRecipe(data);
+      setLoading(false);
+    }).catch((err) => {
+      setError(err);
+      setLoading(false);
+    });
+  }, [id]);
+  
+
+ if (loading) return <div className={styles.loading}>Loading Ghibli magic...</div>;
+ if (error) return <div className={styles.error}>Error: {error.message}</div>;
+ if (!recipe) return <div className={styles.not_found}>Recipe not found</div>;
 
   return (
-    <div className={styles.recipe_detail}>
+    <MotionDiv
+      className={styles.recipe_detail}
+      initial={{ opacity: 0, scale: 0.95 }} 
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Link to="/" className={styles.back_link}>Back to Recipes</Link>
-      <RecipeTitle name={recipe.name} name_jap={recipe.name_jap}/>
+      <RecipeTitle name={recipe.name} name_jap={recipe.name_jap} />
       <RecipeImage src={recipe.image} alt={recipe.name} />
       <div>
         <p>Region: {recipe.region}</p>
@@ -50,8 +72,9 @@ const RecipeDetail = ( {mockRecipes}) => {
         </ul>
       </div>
       <RecipeTags tags={recipe.tags} />
-    </div>
+    </MotionDiv>
   );
 };
+
 
 export default RecipeDetail;

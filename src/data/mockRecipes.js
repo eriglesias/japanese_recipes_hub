@@ -29,7 +29,7 @@ const mockRecipes = [
 
   ],
   tags: ["quick", "protein-rich", "family-friendly"],
-  image: "/assets/IMG_3833.jpeg",
+  image: "/assets/tonkatsu_gs.png",
   culturalNotes: "Traditional preparation method...",
   additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
 },
@@ -116,6 +116,265 @@ const mockRecipes = [
 
   ],
   tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/okonomiyaki_gs.png",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 4,
+  name: "Oyaki",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 5,
+  name: "Ramen",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 6,
+  name: "Satsuki's Bento",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 7,
+  name: "Calcifer's Breakfast",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 8,
+  name: "Yakitori",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 9,
+  name: "Miso Soup",
+  name_jap: "お好み焼き",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
+  image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
+  culturalNotes: "Traditional preparation method...",
+  additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
+},
+{
+  id: 10,
+  name: "Dawn Picnic Cookies",
+  name_jap: "",
+  region: "Fukkuoka",
+  category: "main-dish",
+  prepTime: 15,
+  cookTime: 10,
+  servings: 4,
+  difficulty: "beginner",
+  ingredients: [
+    { name: "cabbage", amount: "200g", note: "7oz" },
+    { name: "scallions", amount: "2", note: "" },
+    { name: "yam or potato", amount: "100g", note: "" },
+    { name: "water", amount: "200ml", note: "7fl oz" },
+    { name: "eggs", amount: "2", note: "" },
+    { name: "all-purpose flour", amount: "200g", note: "all-purpose flour" },
+    { name: "salt", amount: "1/2 teaspoon", note: "" },
+    { name: "katsuobushi", amount: "1 handful", note: "dried bonito flakes" },
+    { name: "sunflower oil", amount: "4 tbsp", note: "" }
+
+  ],
+  instructions: [
+    { step: 1, description: "Cut the cabbage into thin strips and scallions into thin rounds." },
+    { step: 2, description: "grate the yam" },
+    { step: 3, description: "mix in a bowl the grated yam, water and egss" },
+    { step: 4, description: "add the flour and salt and mix." },
+    { step: 5, description: "stir in the cabbage, scalions and katsuobushi (crumbled between your fingers" },
+    { step: 6, description: "heat a frying pan and put 1 table spoon oil." },
+    { step: 7, description: "pour a quarter of the batter into the hot pan, cook about 3 minutes. Turn the okonomiyaki over, cover, and cook for 5 minutes. Flip it back and cook, until the bottom is a light golden brown. Repeat the process until all the batter is used" }
+
+  ],
+  tags: ["comfort food", "spicy", "family-friendly"],
   image: "/assets/f0fcc949bd1c773b1575207a1e88fa47.jpg",
   culturalNotes: "Traditional preparation method...",
   additionalNotes: " To replace the tonkatsu sauce: Heat 4 tablespoons Worcestershire sauce, 2 tablespoons ketchup, 1 tablespoon mirin, and ½ teaspoon soy sauce in a small saucepan over low heat and stir until the sauce thickens. "
@@ -123,10 +382,14 @@ const mockRecipes = [
 
 ];
 
+
+
+
+
+
+
+
 export default mockRecipes;
 
 
-/* 
-Oyaki
-Ramen
-*/
+

@@ -1,16 +1,22 @@
+import PropTypes from 'prop-types';
 import styles from '../styles/RecipeTitle.module.css';
 
 const RecipeTitle = ({ name, name_jap }) => {
   return (
     <div className={styles.title_container}>
-     {name_jap && <h3 className={styles.japanese_title}>{name_jap}</h3>}
-     {name && <h4 className={styles.english_title}>{name}</h4>}
+     {<h3 className={styles.japanese_title}>{name_jap || ''}</h3>}
+     {<h4 className={styles.english_title}>{name || 'Untitled Recipe'}</h4>}
 
     </div>
   );
-}
+};
 
-export default RecipeTitle
+RecipeTitle.PropTypes = {
+  name: PropTypes.string,
+  name_jap: PropTypes.string,
+};
+
+export default RecipeTitle;
 
 /* 
 function RecipeTitle(props) {

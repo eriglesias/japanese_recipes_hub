@@ -1,7 +1,7 @@
 /* app-wide defaults*/
 
 body {
-  background-color: #fffdd0;
+  background-color: #ffffff;
  
 }
 
@@ -10,7 +10,9 @@ body {
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  background-color: #fffdd0;
+  background-color: white;
+  border: #100c08 solid;
+
 
 }
 
@@ -33,3 +35,15 @@ h3{
   padding: 20px;
 }
 
+.loading {
+  text-align: center;
+  color: #6b4e31; 
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  background: #fff8e1; 
+  font-family: 'Noto Sans JP', sans-serif; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
