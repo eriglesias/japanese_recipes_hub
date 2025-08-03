@@ -1,26 +1,20 @@
 import { useState, useEffect } from 'react';
 import styles from '../styles/RecipeList.module.css';
 import RecipeCard from '../components/RecipeCard';
-/* import mockRecipes from '../data/mockRecipes'; */
 
-const RecipeList = () => {
-  const [recipes, setRecipes] = useState([]);
+
+const RecipeList = ({recipes, favorites, toggleFavorite}) => {
   const [loading, setLoading] = useState(true);
   const [filterRegion, setFilterRegion] = useState('All');
 
   useEffect(() => {
-    fetch('http://localhost:3005/recipes')
-      .then(response => response.json())
-      .then(data => {
-        setRecipes(data); // Update state with fetched data
-        setLoading(false); // Stop loading
-      })
-      .catch(error => {
-        console.error('Error fetching recipes:', error);
-        setLoading(false); // Stop loading even on error
-      });
-  }, []); // 
+    // Only set loading to false once recipes are available
+    if (recipes && recipes.length >= 0) {
+      setLoading(false);
+    }
+  }, [recipes]);
 
+  
   if (loading) return <div>Loading recipes...</div>;
   
   const regions = ['All', ...new Set(recipes.map(recipe => recipe.region))];
@@ -45,7 +39,12 @@ const RecipeList = () => {
       </div>
       <div className={styles.recipe_list}>
         {filteredRecipes.map(recipe => (
-          <RecipeCard key={recipe.id} recipe={recipe} />
+          <RecipeCard 
+            key={recipe.id} 
+            recipe={recipe} 
+            favorites={favorites} 
+            onToggle={() => toggleFavorite(recipe.id)}
+          />
         ))}
       </div>
     </div>
