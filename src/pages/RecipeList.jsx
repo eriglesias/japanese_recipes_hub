@@ -1,27 +1,31 @@
 import { useState, useEffect } from 'react';
 import styles from '../styles/RecipeList.module.css';
 import RecipeCard from '../components/RecipeCard';
-
+import SearchBar from '../components/SearchBar';
 
 const RecipeList = ({recipes, favorites, toggleFavorite}) => {
   const [loading, setLoading] = useState(true);
   const [filterRegion, setFilterRegion] = useState('All');
+  const [searchResults, setSearchResults] = useState(null);
 
   useEffect(() => {
     // Only set loading to false once recipes are available
     if (recipes && recipes.length >= 0) {
       setLoading(false);
+      setSearchResults(recipes);
     }
   }, [recipes]);
 
   
   if (loading) return <div>Loading recipes...</div>;
+
+  const baseList = searchResults == null ? recipes: searchResults;
   
   const regions = ['All', ...new Set(recipes.map(recipe => recipe.region))];
 
   const filteredRecipes = filterRegion === 'All'
-    ? recipes
-    : recipes.filter(recipe => recipe.region === filterRegion);
+    ? baseList
+    : baseList.filter(recipe => recipe.region === filterRegion);
 
   return (
     <div>
@@ -29,6 +33,9 @@ const RecipeList = ({recipes, favorites, toggleFavorite}) => {
           <h2 id="title_en"> Recipe List</h2>
           <h2 id="title_jap"> レシピ一覧 </h2> 
       </div>
+      <SearchBar initialRecipes={recipes}
+                 setSearchResults={setSearchResults}
+      />
       <div className={styles.filter}>
         <label>Filter by Region: </label>
         <select value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)}>

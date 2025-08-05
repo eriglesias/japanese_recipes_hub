@@ -24,8 +24,7 @@ const RecipeCard = ({ recipe, onToggle, favorites = [] }) => {
           <p> Difficulty: {recipe.difficulty}</p>
         </div>
         <RecipeTags tags={recipe.tags} />
-      </Link>
-      <button 
+         <button 
         className={`${styles.favorite_button} ${isFavorite ? styles.favorite_active : styles.favorite_inactive}`}
         onClick={handleToggleFavorite}
         aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
@@ -33,6 +32,8 @@ const RecipeCard = ({ recipe, onToggle, favorites = [] }) => {
       >
         {isFavorite ? '❤️' : '🤍'}
       </button>
+      </Link>
+     
     </div>
     
   );
