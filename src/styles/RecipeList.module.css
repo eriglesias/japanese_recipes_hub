@@ -12,8 +12,20 @@
   
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.search-container {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
 .filter {
-    margin: 20px;
+    margin: 0;
     text-align: right;
     color: #4a2c2a;
 }

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import styles from '../styles/SearchBar.module.css';
+
+
 
 const SearchBar = ({  setSearchResults }) => {
   const [query, setQuery] = useState('');
@@ -31,15 +34,15 @@ const SearchBar = ({  setSearchResults }) => {
   }, [query, setSearchResults]);
 
   return (
-    <div className="search-container">
+    <div className={styles.searchContainer}>
       <input
         type="text"
         value={query}
         onChange={e => setQuery(e.target.value)}
         placeholder="Search recipes..."
-        className="search-input"
+        className={styles.searchInput}
       />
-      {loading && <div className="loading">Loading...</div>}
+      {loading && <div className={styles.loading}>Loading...</div>}
     </div>
   );
 };

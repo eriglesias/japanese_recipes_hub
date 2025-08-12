@@ -3,6 +3,7 @@ import styles from '../styles/RecipeList.module.css';
 import RecipeCard from '../components/RecipeCard';
 import SearchBar from '../components/SearchBar';
 
+
 const RecipeList = ({recipes, favorites, toggleFavorite}) => {
   const [loading, setLoading] = useState(true);
   const [filterRegion, setFilterRegion] = useState('All');
@@ -33,17 +34,19 @@ const RecipeList = ({recipes, favorites, toggleFavorite}) => {
           <h2 id="title_en"> Recipe List</h2>
           <h2 id="title_jap"> レシピ一覧 </h2> 
       </div>
-      <SearchBar initialRecipes={recipes}
-                 setSearchResults={setSearchResults}
-      />
-      <div className={styles.filter}>
-        <label>Filter by Region: </label>
+     
+      <div className={styles.toolbar}>
+        <SearchBar initialRecipes={recipes} setSearchResults={setSearchResults}/>
+        <div className={styles.filter}>
+          <label>Filter by Region: </label>
         <select value={filterRegion} onChange={(e) => setFilterRegion(e.target.value)}>
           {regions.map(region => (
             <option key={region} value={region}>{region}</option>
           ))}
-        </select>
+          </select>
+        </div>
       </div>
+        
       <div className={styles.recipe_list}>
         {filteredRecipes.map(recipe => (
           <RecipeCard 
